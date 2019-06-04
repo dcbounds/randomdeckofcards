@@ -17,24 +17,40 @@ body {
   width: 450px;
   height: 573px;
   box-shadow: 0px 10px 20px 10px rgba(70, 70, 70, 0.164);
-  padding: 20px;
+  padding: 0px;
   border-radius: 20px;
   position: relative;
-}
-
-.topsuit {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 30px;
-}
-
-.bottomsuit {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 30px;
-}
-.cardnumber {
   font-size: 200px;
+  margin: auto;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 40px;
+    font-size: 80px;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 40px;
+    font-size: 80px;
+  }
+  &.spade::before,
+  &.spade:after {
+    content: "\2660";
+  }
+  &.heart:before,
+  &.heart:after {
+    content: "\2665";
+  }
+  &.diamond:before,
+  &.diamond:after {
+    content: "\2666";
+  }
+  &.club:before,
+  &.club:after {
+    content: "\2663";
+  }
 }

@@ -7,29 +7,32 @@ import "../assets/img/4geeks.ico";
 import "../style/index.scss";
 
 window.onload = function() {
-  document.getElementById("the-excuse").innerHTML = generateExcuse();
-  console.log("Hello Rigo from the console!");
+  document.querySelector(".card").innerHTML = cardNumb();
+  document.querySelector(".card").classList.add(cardSuit());
 };
 
-let generateExcuse = function() {
-  let who = ["The neighbors dog", "R2-D2", "My Autobot", "My pet llama"];
-
-  let what = [
-    "went number 2",
-    "entered The Matrix",
-    "sat on my pinky toe",
-    "leaked poisonous acid"
+let cardNumb = function() {
+  let numbers = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K"
   ];
-  let where = [
-    "at church...",
-    "in the shower...",
-    "at the playgrond...",
-    "at the library..."
-  ];
+  let indexNumbers = Math.floor(Math.random() * numbers.length);
+  return numbers[indexNumbers];
+};
 
-  let whoIndex = Math.floor(Math.random() * who.length);
-  let whatIndex = Math.floor(Math.random() * what.length);
-  let whereIndex = Math.floor(Math.random() * where.length);
-
-  return who[whoIndex] + " " + what[whatIndex] + " " + where[whereIndex];
+let cardSuit = function() {
+  let suit = ["diamond", "spade", "heart", "club"];
+  let indexSuit = Math.floor(Math.random() * suit.length);
+  return suit[indexSuit];
 };
