@@ -1,12 +1,12 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
 body {
-  background: rgb(202, 202, 202);
+  background: rgb(150, 150, 150);
   font-size: 20px;
   font-family: Helvetica, sans-serif;
   margin: 0px;
   height: 100%;
-  color: rgb(75, 75, 75);
+  color: rgb(150, 150, 150);
 }
 
 .page {
@@ -16,11 +16,12 @@ body {
 .card {
   width: 450px;
   height: 573px;
-  box-shadow: 0px 10px 20px 10px rgba(70, 70, 70, 0.164);
+  box-shadow: 0px 10px 20px 10px rgba(54, 54, 54, 0.425);
   padding: 0px;
   border-radius: 20px;
   font-size: 200px;
   position: relative;
+  background-color: rgb(20, 20, 20);
   &::before {
     top: 0;
     left: 0;
@@ -44,15 +45,30 @@ body {
   &.heart:before,
   &.heart:after {
     content: "\2665";
-    color: red;
+    color: rgb(150, 230, 60);
   }
   &.diamond:before,
   &.diamond:after {
     content: "\2666";
-    color: red;
+    color: rgb(150, 230, 60);
   }
   &.club:before,
   &.club:after {
     content: "\2663";
   }
+}
+
+.btn {
+  font-size: 18pt;
+  padding: 10px;
+  margin: 0px;
+  width: 200px;
+  background-color: rgb(150, 230, 60);
+  border: none;
+  color: rgb(20, 20, 20);
+  box-shadow: 0px 10px 20px 10px rgba(70, 70, 70, 0.164);
+}
+.btn:hover {
+  background-color: rgb(20, 20, 20);
+  color: rgb(150, 230, 60);
 }
