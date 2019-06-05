@@ -27,12 +27,12 @@ let cardNumb = function() {
     "Q",
     "K"
   ];
-  let indexNumbers = Math.floor(Math.random() * numbers.length);
-  return numbers[indexNumbers];
+  let cardNumbers = Math.floor(Math.random() * numbers.length);
+  return numbers[cardNumbers];
 };
 
 let cardSuit = function() {
   let suit = ["diamond", "spade", "heart", "club"];
-  let indexSuit = Math.floor(Math.random() * suit.length);
-  return suit[indexSuit];
+  let cardSuit = Math.floor(Math.random() * suit.length);
+  return suit[cardSuit];
 };

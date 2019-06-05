@@ -39,21 +39,21 @@ body {
     margin-right: 35px;
   }
   &.spade::before,
-  &.spade:after {
+  &.spade::after {
     content: "\2660";
   }
-  &.heart:before,
-  &.heart:after {
+  &.heart::before,
+  &.heart::after {
     content: "\2665";
     color: rgb(150, 230, 60);
   }
-  &.diamond:before,
-  &.diamond:after {
+  &.diamond::before,
+  &.diamond::after {
     content: "\2666";
     color: rgb(150, 230, 60);
   }
-  &.club:before,
-  &.club:after {
+  &.club::before,
+  &.club::after {
     content: "\2663";
   }
 }
